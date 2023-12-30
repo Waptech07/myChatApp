@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
   signInEmailButton.addEventListener("click", () => {
-    createUserWithEmailAndPassword();
+    signInWithGoogle();
   });
 
   signOutButton.addEventListener("click", () => {
