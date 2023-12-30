@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>HeyDM👋</title>
+    <!-- Google fonts. -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Bungee Outline"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Varela Round"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Use font awesome icons. -->
+    <script type="module" src="./auth.js"></script>
+    <style>
+      body {
+        font-family: "Varela Round", sans-serif;
+        background-image: url("./assets/chat-background1.jpg");
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      .chat-container,
+      .welcome-container {
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+      }
+
+      .card-body {
+        background-image: url("./assets/chat-background2.jpg");
+      }
+
+      #user-info {
+        margin-bottom: 20px;
+      }
+
+      #illustration {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: #343a40;
+      }
+
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        color: #6c757d;
+      }
+
+      #signin-button,
+      #signout-button {
+        font-size: 1.2rem;
+      }
+
+      .card {
+        max-width: 100%;
+        margin: auto;
+        margin-top: 20px;
+        border: none;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-body {
+        max-height: 300px;
+        overflow-y: auto;
+      }
+
+      .messages {
+        margin-bottom: 10px;
+      }
+
+      .input-group {
+        margin-top: 10px;
+      }
+
+      .btn-submit {
+        margin-left: 10px;
+      }
+
+      .alert {
+        margin-bottom: 5px;
+      }
+
+      .alert-success {
+        width: 60%;
+        float: right;
+      }
+
+      .alert-primary {
+        width: 60%;
+        float: left;
+        
+      }
+
+      /* Responsive styles using media queries */
+      @media (max-width: 991px) {
+        .col-md-5,
+        .col-md-7 {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .chat-container,
+        .welcome-container {
+          margin: 10px;
+        }
+
+        .col-md-6.rounded-circle,
+        .col-md-5.rounded-circle,
+        .col-md-6,
+        .col-md-5 {
+          width: 100%;
+        }
+
+        #signout-button {
+          margin-top: 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid" data-aos="fade-right">
+      <div class="chat-container">
+        <div class="chat-content"></div>
+        <button id="signout-button" class="btn btn-outline-secondary mt-3">
+          Sign Out
+        </button>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="welcome welcome-container" data-aos="fade-up">
+        <!-- Your chat content -->
+        <div class="row">
+          <div
+            class="col-md-6 rounded-circle d-flex bg-primary justify-content-center"
+          >
+            <img
+              id="illustration"
+              src="./illustration1-removebg-preview.png"
+              alt="Illustration"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-md-6 d-flex flex-column justify-content-center">
+            <h1 class="text-white">Welcome to HeyDM👋</h1>
+            <p>Connect with friends and enjoy seamless communication.</p>
+            <div class="d-flex">
+              <button
+                id="signin-email-button"
+                class="btn btn-outline-light me-2"
+              >
+                Sign Up
+              </button>
+              <button
+                id="signin-google-button"
+                class="btn btn-outline-light me-2"
+              >
+                Login
+              </button>
+            </div>
+            <div class="user-info"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
